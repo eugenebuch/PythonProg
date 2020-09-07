@@ -22,9 +22,8 @@ def fileSave(a):
 def main():
 # Основная процедура, сюда вынесены управляющие элементы и вызовы других процедур (wrapper)
     n = 10
-    lst = []
-    for i in range(n):
-        lst.append(float(input())*0.13)
+    print("Введите произвольное количество цифр через пробел")
+    lst = list(map(lambda x: float(x)*0.13, input().split(' ')))
     sort(lst)
     printList(lst)
     fileSave(lst)
